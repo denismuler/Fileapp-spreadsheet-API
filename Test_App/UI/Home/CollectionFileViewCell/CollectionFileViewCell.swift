@@ -10,7 +10,7 @@ import UIKit
 class CollectionFileViewCell: UICollectionViewCell {
     
     @IBOutlet weak var fileLabel: UILabel!
-  
+    
     func setLabel(label: String) {
         fileLabel.text = label
     }
