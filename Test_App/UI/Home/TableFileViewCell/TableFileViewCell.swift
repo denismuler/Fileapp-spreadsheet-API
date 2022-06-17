@@ -21,10 +21,10 @@ class TableFileViewCell: UITableViewCell {
             titleLabel.text = file.name
             
             if case .file = file.type {
-                iconImageView.image = UIImage.init(systemName: "folder")
+                iconImageView.image = UIImage.init(systemName: "doc.richtext.fill")
                 arrowButton.isHidden = true
             } else if case .directory = file.type {
-                iconImageView.image = UIImage.init(systemName: "doc.richtext.fill")
+                iconImageView.image = UIImage.init(systemName: "folder")
                 arrowButton.isHidden = false
             }
         }

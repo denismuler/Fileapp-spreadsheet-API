@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="fileTableViewCell" id="H2B-u6-SGW" customClass="TableFileViewCell" customModule="Test_App" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="499" height="69"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="doc.richtext.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Hgj-7S-STg">
+                    <rect key="frame" x="15" y="8.5" width="46" height="52"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="46" id="dRH-U3-yDT"/>
+                        <constraint firstAttribute="height" constant="52" id="tyE-Ly-M7G"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w8i-hk-Q7t">
+                    <rect key="frame" x="76" y="24" width="378" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ge-k3-Zfu">
+                    <rect key="frame" x="469" y="27" width="15" height="15"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="15" id="3ey-H0-lyt"/>
+                        <constraint firstAttribute="width" constant="15" id="Nlx-4U-56e"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="arrow.forward" catalog="system"/>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="ZFW-22-Vyo"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="0ge-k3-Zfu" firstAttribute="centerY" secondItem="H2B-u6-SGW" secondAttribute="centerY" id="B1H-XR-w5E"/>
+                <constraint firstItem="0ge-k3-Zfu" firstAttribute="leading" secondItem="w8i-hk-Q7t" secondAttribute="trailing" constant="15" id="DDh-Xr-Z5h"/>
+                <constraint firstItem="w8i-hk-Q7t" firstAttribute="leading" secondItem="Hgj-7S-STg" secondAttribute="trailing" constant="15" id="atu-rl-vYk"/>
+                <constraint firstItem="Hgj-7S-STg" firstAttribute="leading" secondItem="ZFW-22-Vyo" secondAttribute="leading" constant="15" id="jhU-fc-7RK"/>
+                <constraint firstItem="Hgj-7S-STg" firstAttribute="centerY" secondItem="H2B-u6-SGW" secondAttribute="centerY" id="oAX-vi-sI5"/>
+                <constraint firstItem="ZFW-22-Vyo" firstAttribute="trailing" secondItem="0ge-k3-Zfu" secondAttribute="trailing" constant="15" id="qk9-S0-ccq"/>
+                <constraint firstItem="w8i-hk-Q7t" firstAttribute="centerY" secondItem="H2B-u6-SGW" secondAttribute="centerY" id="t2J-WV-PCn"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="arrowButton" destination="0ge-k3-Zfu" id="fg1-de-xm6"/>
+                <outlet property="iconImageView" destination="Hgj-7S-STg" id="tTS-cx-coD"/>
+                <outlet property="titleLabel" destination="w8i-hk-Q7t" id="bNt-j0-fUu"/>
+            </connections>
+            <point key="canvasLocation" x="63.04347826086957" y="-396.09375"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrow.forward" catalog="system" width="128" height="98"/>
+        <image name="doc.richtext.fill" catalog="system" width="115" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

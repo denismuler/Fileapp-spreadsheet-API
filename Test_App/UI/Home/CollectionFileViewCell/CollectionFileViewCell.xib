@@ -10,17 +10,21 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" restorationIdentifier="collectionCell" id="fXc-Ac-EEC" customClass="CollectionViewCell" customModule="Test_App" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="101" height="99"/>
+        <view contentMode="scaleToFill" restorationIdentifier="collectionCell" id="fXc-Ac-EEC" customClass="CollectionFileViewCell" customModule="Test_App" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="141" height="99"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="folder" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="JOJ-oU-nSv">
-                    <rect key="frame" x="0.0" y="1" width="101" height="72"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" restorationIdentifier="fileCollectionViewCell" image="folder" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="JOJ-oU-nSv" customClass="Collectio">
+                    <rect key="frame" x="0.0" y="1" width="141" height="75.5"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="80" id="er4-ec-V9f"/>
+                    </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dET-j8-fbG">
-                    <rect key="frame" x="29" y="75" width="42" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dET-j8-fbG">
+                    <rect key="frame" x="0.0" y="78" width="141" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="Sy5-5a-o6T"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -28,13 +32,24 @@
             </subviews>
             <viewLayoutGuide key="safeArea" id="FIy-2w-k6e"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="JOJ-oU-nSv" firstAttribute="trailing" secondItem="FIy-2w-k6e" secondAttribute="trailing" id="3DL-ew-7f6"/>
+                <constraint firstItem="JOJ-oU-nSv" firstAttribute="leading" secondItem="FIy-2w-k6e" secondAttribute="leading" id="5QR-9R-jbO"/>
+                <constraint firstItem="FIy-2w-k6e" firstAttribute="trailing" secondItem="dET-j8-fbG" secondAttribute="trailing" id="A27-8g-HdQ"/>
+                <constraint firstItem="JOJ-oU-nSv" firstAttribute="top" secondItem="fXc-Ac-EEC" secondAttribute="top" id="UuP-eN-sDL"/>
+                <constraint firstItem="dET-j8-fbG" firstAttribute="top" secondItem="JOJ-oU-nSv" secondAttribute="bottom" id="c9s-Ac-sm2"/>
+                <constraint firstItem="dET-j8-fbG" firstAttribute="leading" secondItem="FIy-2w-k6e" secondAttribute="leading" id="djN-PV-w3h"/>
+                <constraint firstItem="FIy-2w-k6e" firstAttribute="bottom" secondItem="dET-j8-fbG" secondAttribute="bottom" id="mCy-Oe-oyT"/>
+            </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="fileLabel" destination="dET-j8-fbG" id="K6y-bB-bT6"/>
+                <outlet property="imageView" destination="JOJ-oU-nSv" id="7SG-la-dfa"/>
+                <outlet property="imageViewButton" destination="JOJ-oU-nSv" id="cGh-nc-7a4"/>
             </connections>
-            <point key="canvasLocation" x="-239.85507246376812" y="-223.99553571428569"/>
+            <point key="canvasLocation" x="-210.86956521739131" y="-223.99553571428569"/>
         </view>
     </objects>
     <resources>
