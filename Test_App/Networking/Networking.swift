@@ -1,5 +1,5 @@
 //
-//  APICaller.swift
+//  Networking.swift
 //  Test_App
 //
 //  Created by Georgie Muler on 14.06.2022.
@@ -40,6 +40,7 @@ class Networking {
     func decodeFiles(with data: Data) -> [File]? {
         do {
             let files = try decoder.decode([File].self, from: data)
+            print(files)
             return files
         } catch {
             return nil
